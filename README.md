@@ -1,4 +1,4 @@
-# atomic-aeser
+# atomic-aese
 
 Namespace-aware easing functions.
 

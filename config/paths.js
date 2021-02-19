@@ -10,7 +10,7 @@ const dirs = {
 const files = {
   srcEntry: `${dirs.src}/index.ts`,
   dist: {
-    iife: `${dirs.dist}/atomic-easer.js`,
+    iife: `${dirs.dist}/atomic-ease.js`,
     esm: pkg.module,
   },
 };
