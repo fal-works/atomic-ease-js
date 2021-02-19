@@ -4,6 +4,7 @@ const dirs = {
   src: "src",
   dist: "lib",
   types: "types",
+  distEsm: "lib/esm",
 };
 
 const files = {
@@ -14,6 +15,4 @@ const files = {
   },
 };
 
-const dirsToClean = [dirs.dist, dirs.types];
-
-module.exports = { dirs, files, dirsToClean };
+module.exports = { dirs, files };
