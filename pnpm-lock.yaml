@@ -1,11 +1,10 @@
 devDependencies:
   '@fal-works/s-l-t-r': 0.5.0
-  '@fal-works/ts-transpile-modules': 0.2.0
-  '@types/node': 14.14.28
+  '@types/node': 14.14.30
   '@types/prettier': 2.2.1
   '@typescript-eslint/eslint-plugin': 4.15.1_dd080f2a8fb4d0ac76cfb4c7062ee728
   '@typescript-eslint/parser': 4.15.1_eslint@7.20.0+typescript@4.1.5
-  esbuild: 0.8.47
+  esbuild: 0.8.49
   eslint: 7.20.0
   eslint-config-prettier: 7.2.0_eslint@7.20.0
   eslint-plugin-total-functions: 4.7.2_eslint@7.20.0+typescript@4.1.5
@@ -51,13 +50,9 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-1JTKgrOKAHVivSvOYw+sJOunkBjUOvjqWk1DPja7ZFhIS2mX/4EgTT8M7eTK9jrKhL/FvXXEbQwIs3pg1xp3dg==
-  /@fal-works/deep-freeze/0.1.0:
-    dev: true
-    resolution:
-      integrity: sha512-qZ3EIwfEZzFM1gK8E2iepmmhnZdfYZPC/Xwh1siI4WSYwRCuAGYYN/pWzKsbEiW9BHZWLF65SlJFmO/28ukYtw==
   /@fal-works/esbuild-plugin-regexp-externals/1.1.0:
     dependencies:
-      esbuild: 0.8.47
+      esbuild: 0.8.49
     dev: true
     resolution:
       integrity: sha512-UjUI6Aysmx1hlkcxEuQ7v99SCoH32PV/1T2lb7X+I0mPU88CsZbORK8bNN0ooa7BGyDdniKIi+AiaTS9ijqVsA==
@@ -65,17 +60,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-8ZiwTAYA/REWA3xnTZKynldt1827mI5QrRDU8HCt2KCYrLtPtYVCkHjQ/Q48ZuVm7dxuQJqkVjzm7WtFJHDwfg==
-  /@fal-works/ts-transpile-modules/0.2.0:
-    dependencies:
-      '@fal-works/deep-freeze': 0.1.0
-      deepcopy: 2.1.0
-      fast-glob: 3.2.5
-      mri: 1.1.6
-      typescript: 4.1.5
-    dev: true
-    hasBin: true
-    resolution:
-      integrity: sha512-cmNlhAaAhw/gtKQ9rG9g9VG/Qiwn+wU4W0dVQmpAGHLlFbyi2UacP468XGF92OlNGEwTZBTCjHX8PqQQ7EUxGg==
   /@nodelib/fs.scandir/2.1.4:
     dependencies:
       '@nodelib/fs.stat': 2.0.4
@@ -104,10 +88,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==
-  /@types/node/14.14.28:
+  /@types/node/14.14.30:
     dev: true
     resolution:
-      integrity: sha512-lg55ArB+ZiHHbBBttLpzD07akz0QPrZgUODNakeC09i62dnrywr9mFErHuaPlB6I7z+sEbK+IYmplahvplCj2g==
+      integrity: sha512-gUWhy8s45fQp4PqqKecsnOkdW0kt1IaKjgOIR3HPokkzTmQj9ji2wWFID5THu1MKrtO+d4s2lVrlEhXUsPXSvg==
   /@types/prettier/2.2.1:
     dev: true
     resolution:
@@ -397,12 +381,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
-  /deepcopy/2.1.0:
-    dependencies:
-      type-detect: 4.0.8
-    dev: true
-    resolution:
-      integrity: sha512-8cZeTb1ZKC3bdSCP6XOM1IsTczIO73fdqtwa2B0N15eAz7gmyhQo+mc5gnFuulsgN3vIQYmTgbmQVKalH1dKvQ==
   /dir-glob/3.0.1:
     dependencies:
       path-type: 4.0.0
@@ -431,12 +409,12 @@ packages:
       node: '>=8.6'
     resolution:
       integrity: sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==
-  /esbuild/0.8.47:
+  /esbuild/0.8.49:
     dev: true
     hasBin: true
     requiresBuild: true
     resolution:
-      integrity: sha512-4C9pInguP36c9CRDMSb6W1KrMfXrLIQVtI02Vglc43RBV0Dw49ODEnP6985mrz5iqCdQ2Cxmb9i670J/s3DBPA==
+      integrity: sha512-itiFVYv5UZz4NooO7/Y0bRGVDGz/M/cxKbl6zyNI5pnKaz1mZjvZXAFhhDVz6rGCmcdTKj5oag6rh8DaaSSmfQ==
   /escape-string-regexp/1.0.5:
     dev: true
     engines:
@@ -1111,7 +1089,7 @@ packages:
   /ts-sofort/0.4.2:
     dependencies:
       '@fal-works/esbuild-plugin-regexp-externals': 1.1.0
-      esbuild: 0.8.47
+      esbuild: 0.8.49
       mri: 1.1.6
     dev: true
     hasBin: true
@@ -1140,12 +1118,6 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==
-  /type-detect/4.0.8:
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
   /type-fest/0.8.1:
     dev: true
     engines:
@@ -1194,13 +1166,12 @@ packages:
       integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 specifiers:
   '@fal-works/s-l-t-r': ^0.5.0
-  '@fal-works/ts-transpile-modules': ^0.2.0
-  '@types/node': ^14.14.28
+  '@types/node': ^14.14.30
   '@types/prettier': ^2.2.1
   '@typescript-eslint/eslint-plugin': 4.15.1
   '@typescript-eslint/parser': ^4.15.1
-  esbuild: ^0.8.47
-  eslint: 7.20.0
+  esbuild: ^0.8.49
+  eslint: ^7.20.0
   eslint-config-prettier: ^7.2.0
   eslint-plugin-total-functions: ^4.7.2
   prettier: ^2.2.1
