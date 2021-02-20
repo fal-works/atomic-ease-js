@@ -16,7 +16,7 @@ const result = ease.In.expo(0.5);
 After bundling with [Rollup](https://rollupjs.org/):
 
 ```js
-const easeInExpo = (x) => (x ? Math.pow(2, 10 * (x - 1)) : 0);
+const easeInExpo = (x) => (x <= 0 ? 0 : Math.pow(2, 10 * (x - 1)));
 
 const result = easeInExpo(0.5);
 ```
