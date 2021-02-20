@@ -1,7 +1,7 @@
 import sltr from "@fal-works/s-l-t-r";
-import iife from "./build-iife.js";
+import bundleIife from "./bundle-iife.js";
 import addBanner from "./add-banner.js";
-import { dirs } from "../config/paths.js";
+import { dirs, files } from "../config/paths.js";
 
 const { run, cmd, cmdEx, seq, par } = sltr;
 const { cleandir } = sltr.builtin;
@@ -14,9 +14,12 @@ const buildEsm = seq(
     cmd("prettier", `--write ${dirs.distEsm}/**/*.js`),
     cmd("prettier", `--write ${dirs.types}/**/*.d.ts`)
   ),
-  cmdEx(addBanner, "add banner")
+  cmdEx(() => addBanner(files.dist.esm), "add banner")
 );
 
-const buildIife = cmdEx(iife, "build IIFE");
+const buildIife = cmdEx(
+  () => bundleIife(files.srcEntry, files.dist.iife),
+  "build IIFE"
+);
 
 void run(seq(clean, par(buildEsm, buildIife)));

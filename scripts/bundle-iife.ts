@@ -1,10 +1,9 @@
 import esbuild from "esbuild";
 import { banner, iifeName } from "../config/bundle-config.js";
-import { files } from "../config/paths.js";
 
-const run = async (): Promise<void> => {
+const run = async (entryPoint: string, outfile: string): Promise<void> => {
   const baseOptions: esbuild.BuildOptions = {
-    entryPoints: [files.srcEntry],
+    entryPoints: [entryPoint],
     platform: "browser",
     banner,
   };
@@ -12,7 +11,7 @@ const run = async (): Promise<void> => {
   await esbuild.build({
     ...baseOptions,
     bundle: true,
-    outfile: files.dist.iife,
+    outfile,
     format: "iife",
     minify: true,
     target: "es6",
