@@ -7,7 +7,7 @@ const easeOutQuart: Easing = (x) => -fourthPower(x - 1) + 1;
 const easeOutExpo: Easing = (x) => (x < 1 ? -Math.pow(2, -10 * x) + 1 : 1);
 
 /** @returns New "easeOutBack" function with `coefficient`. */
-const createEaseOutBack = (coefficient = 1.70158): Easing => {
+const createEaseOutBack = (coefficient: number): Easing => {
   return (x: number) => {
     const r = x - 1;
     const r2 = r * r;
@@ -15,10 +15,14 @@ const createEaseOutBack = (coefficient = 1.70158): Easing => {
   };
 };
 
+/** "easeOutBack" with coefficient `1.70158`. */
+const easeOutBack: Easing = createEaseOutBack(1.70158);
+
 export {
   easeOutQuad as quad,
   easeOutCubic as cubic,
   easeOutQuart as quart,
   easeOutExpo as expo,
+  easeOutBack as back,
   createEaseOutBack as createBack,
 };

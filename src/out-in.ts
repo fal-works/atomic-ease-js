@@ -12,10 +12,14 @@ const easeOutInExpo = integrate(easeOut.expo, easeIn.expo);
 const createEaseOutInBack = (coefficient: number): Easing =>
   integrate(easeOut.createBack(coefficient), easeIn.createBack(coefficient));
 
+/** "easeOutInBack" with coefficient `1.70158`. */
+const easeOutInBack: Easing = createEaseOutInBack(1.70158);
+
 export {
   easeOutInQuad as quad,
   easeOutInCubic as cubic,
   easeOutInQuart as quart,
   easeOutInExpo as expo,
+  easeOutInBack as back,
   createEaseOutInBack as createBack,
 };
