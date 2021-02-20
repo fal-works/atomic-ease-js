@@ -1,9 +1,14 @@
+const { dirs } = require("./paths.js");
+const { js, ts } = require("./path-util.js");
+
+const ignorePatterns = [`/${dirs.dist}/`, `/${dirs.test}/out/`];
+
 const pattern = {
-  src: `src/**/*.ts`,
-  scriptsTs: `scripts/**/*.ts`,
-  scriptsJs: `scripts/**/*.js`,
-  config: "config/**/*.js",
-  test: `test/**/*.js`,
+  src: ts(dirs.src),
+  scriptsTs: ts(dirs.scripts),
+  scriptsJs: js(dirs.scripts),
+  config: js(dirs.config),
+  test: js(dirs.test),
   eslintrc: ".eslintrc.js",
 };
 
@@ -24,9 +29,7 @@ const patterns = (() => {
   return { src, scriptsTs, scriptsAll, lintedTs, lintedAll, node };
 })();
 
-const ignorePatterns = [`/lib/`, `/test/out/`];
-
 module.exports = {
-  patterns,
   ignorePatterns,
+  patterns,
 };
