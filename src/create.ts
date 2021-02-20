@@ -1,6 +1,25 @@
 import type { Easing } from "./type";
 
 /**
+ * Creates a new easing function by clipping and normalizing a specific range
+ * from any 1-dimension numeric function.
+ */
+const createEasing = (
+  func: (x: number) => number,
+  xRange: { start: number; end: number },
+  yRange: { start: number; end: number }
+): Easing => {
+  const { start: startX, end: endX } = xRange;
+  const { start: startY, end: endY } = yRange;
+  const lengthX = endX - startX;
+  const lengthY = endY - startY;
+  if (lengthY === 0) throw new Error();
+  const factorY = 1 / lengthY;
+
+  return (x) => factorY * (func(startX + x * lengthX) - startY);
+};
+
+/**
  * Concatenates two easing functions without normalization.
  * @param thresholdRatio - Defaults to `0.5`.
  * @returns New easing function.
@@ -46,4 +65,8 @@ const integrateEasing = (
   };
 };
 
-export { concatenateEasing as concatenate, integrateEasing as integrate };
+export {
+  createEasing as from,
+  concatenateEasing as concatenate,
+  integrateEasing as integrate,
+};
