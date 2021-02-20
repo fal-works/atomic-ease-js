@@ -9,7 +9,6 @@
   ],
   "files": [
     "/lib/",
-    "/src/",
     "/types/",
     "!tsconfig*.json"
   ],
